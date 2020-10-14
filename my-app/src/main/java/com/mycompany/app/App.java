@@ -16,7 +16,7 @@ public class App
         } catch (Exception e) {
             print("Exception: " + e.toString());
         }
-        print("Output: " + Arrays.toString(outArray));
+        print("Output: " + Arrays.toString(outArray) + outArray.length);
     }
 
     public static String[] program(String[] str) {
@@ -30,6 +30,8 @@ public class App
                 publish("fizzbuzz", i);
             } else if (y % 5 == 0) {
                 publish("buzz", i);
+            } else if (isLucky(x)) {
+                publish("lucky", i);
             } else if (y % 3 == 0) {
                 publish("fizz", i);
             } else {
@@ -38,6 +40,15 @@ public class App
         }
         return outArray;
     }
+
+    public static boolean isLucky(String x) {
+        if(x.contains("3")){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public static void publish(String str, int idx) {
         outArray[idx] = str;
         //print(str);
