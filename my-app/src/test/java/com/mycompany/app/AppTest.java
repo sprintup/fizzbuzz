@@ -109,4 +109,16 @@ public class AppTest
         // Assert
         assertArrayEquals(expected, actual);
     }
+    @Test
+    public void shouldPassStep3() {
+        // Arrange
+        String[] testInput = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"};
+        String expected = "{fizz=4, integer=10, lucky=2, buzz=3, fizzbuzz=1}";
+        App mainClass = new App();
+        // Act
+        String actual = mainClass.report(testInput);
+        mainClass.print("actual: "+actual);
+        // Assert
+        assertEquals(expected, actual);
+    }
 }

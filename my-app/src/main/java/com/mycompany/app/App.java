@@ -1,6 +1,8 @@
 package com.mycompany.app;
 
 import java.util.Arrays;
+import java.util.Hashtable;
+
 /**
  * Hello world!
  *
@@ -8,6 +10,7 @@ import java.util.Arrays;
 public class App
 {
     public static String[] outArray;
+    public static Hashtable<String, Integer> counterHash = new Hashtable<String, Integer>();
 
     public static void main(String[] args) {
         print("Input: " + Arrays.toString(args));
@@ -15,6 +18,7 @@ public class App
             program(args);
         } catch (Exception e) {
             print("Exception: " + e.toString());
+            e.printStackTrace();
         }
         print("Output: " + Arrays.toString(outArray) + outArray.length);
     }
@@ -38,7 +42,33 @@ public class App
                 publish(x, i);
             }
         }
+        report(outArray);
+        print("report: " + counterHash.toString()); //reports
         return outArray;
+    }
+
+    public static String report(String[] array) {
+        String arrayElement;
+        Integer oldInt;
+        counterHash.put("integer" , 0); // initialized prior
+        for (int i = 0; i < array.length; i++) {
+            arrayElement = array[i].toString();
+            oldInt = counterHash.get(arrayElement);
+            if (arrayElement == "fizz" || arrayElement == "buzz" || arrayElement == "fizzbuzz" || arrayElement == "lucky") {
+                // strings
+                if (counterHash.get(arrayElement) == null) {
+                    counterHash.put(arrayElement , 1); // initialized during
+                } else {
+                    counterHash.put(arrayElement, oldInt + 1);
+                }
+            } else {
+                // integers
+                oldInt = counterHash.get("integer");
+                counterHash.put("integer", oldInt + 1);
+            }
+        }
+        print("here: " + counterHash.toString()); // here: {fizz=4, integer=10, lucky=2, buzz=3, fizzbuzz=1}
+        return counterHash.toString(); // just for testing
     }
 
     public static boolean isLucky(String x) {
