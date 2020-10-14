@@ -87,4 +87,15 @@ public class AppTest
         // Act
         // Assert
     }
+    @Test
+    public void shouldPrintLucky() {
+        // Arrange
+        String[] testInput = {"3"};
+        String[] expected = {"lucky"};
+        App mainClass = new App();
+        // Act
+        String[] actual = App.program(testInput);
+        // Assert
+        assertArrayEquals(expected, actual);
+    }
 }
