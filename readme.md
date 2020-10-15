@@ -13,7 +13,7 @@ https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
 2. For [step 2](https://github.com/sprintup/fizzbuzz/commit/15638e5427702728575b977f89d290f3072cd814), I just copied the code from step 1 into the new Maven project (my-app) 
      
 
-3. [Step 3](https://github.com/sprintup/fizzbuzz/pull/2)
+3. [Step 3](https://github.com/sprintup/fizzbuzz/pull/2) 2258866f985b8d27ce60a64eb74613fd5c5c7d17
    * I'm not sure if the 'output' is the return value or the side-effect (log). Both are possible, but implementation is different. I'm going assume it's the log, since machines wouldn't be able to read reports very easily. Further, to have it in the right order (oneline for array, then the report) I'm going to ask the project manager if it makes a difference to the end user. 
    * The hashtable works, but there is something wrong with the test, where it is only showing the integer. More familiarity with java would help, but it could be it could be something with the testing framework too, since the correct string is printed just before the return. It could be that I'm passing multiple integers with a space as a delimiter. This is something I would document and bring up in code review, it's documented in [issue #3](https://github.com/sprintup/fizzbuzz/issues/3).
    
