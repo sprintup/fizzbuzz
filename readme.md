@@ -10,7 +10,7 @@ https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
 
    [Here](https://github.com/sprintup/fizzbuzz/commit/30267efb44c746978d54b2c4ce287e3591b7a294) are the changes before step 2.
 
-2. [Step](https://github.com/sprintup/fizzbuzz/pull/1) | [Commit](https://github.com/sprintup/fizzbuzz/commit/15638e5427702728575b977f89d290f3072cd814), I just copied the code from step 1 into the new Maven project (my-app) 
+2. [Step](https://github.com/sprintup/fizzbuzz/pull/1) | [commit](https://github.com/sprintup/fizzbuzz/commit/15638e5427702728575b977f89d290f3072cd814), I just copied the code from step 1 into the new Maven project (my-app) 
      
 
 3. [Step 3](https://github.com/sprintup/fizzbuzz/pull/2) | [commit](https://github.com/sprintup/fizzbuzz/pull/2/commits/2258866f985b8d27ce60a64eb74613fd5c5c7d17)
